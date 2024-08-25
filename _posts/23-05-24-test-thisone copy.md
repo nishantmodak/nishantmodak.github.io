@@ -4,7 +4,7 @@ title: "Sample Blog Post"
 date: 2023-05-24
 categories: [technology, programming]
 tags: [sample, markdown, blog]
-image: https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image
+image: https://via.placeholder.com/800x400.png?text=Sample+Blog+Post
 ---
 
 # Welcome to My Sample Blog Post
@@ -14,10 +14,6 @@ This is a sample blog post to demonstrate the structure and formatting of a typi
 ## Introduction
 
 In this post, we'll cover some basic Markdown syntax and how it can be used to create engaging blog content.
-
-![Sample Image](https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image)
-
-This is a sample image that will be displayed on the index page and in the blog post.
 
 ## Main Content
 
@@ -32,5 +28,3 @@ This is a sample image that will be displayed on the index page and in the blog 
 Here's an example of inline code: `console.log("Hello, World!");`
 
 And a code block:
-
-```

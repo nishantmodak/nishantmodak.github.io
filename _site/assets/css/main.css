@@ -125,7 +125,6 @@ footer {
 
 .social-icons a:hover {
     color: #333;
-    opacity: 1;
 }
 
 /* Responsive adjustment for smaller screens */
@@ -188,8 +187,12 @@ footer {
 /* Post styles */
 .post-meta {
   color: #777;
-  font-size: 0.9rem;
+  font-size: 0.8em;
   margin-bottom: 1rem;
+}
+
+.post-excerpt {
+  font-size: 0.9em;
 }
 
 .post-tags {
@@ -204,4 +207,79 @@ footer {
   font-size: 0.8rem;
   margin-right: 0.5rem;
   padding: 0.2rem 0.5rem;
+}
+
+/* Post card styles */
+.post-card-container {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 1rem;
+  overflow-x: auto;
+  padding-bottom: 10px;
+}
+
+.post-card {
+  flex: 0 0 calc(33.33% - 14px);
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  width: calc(33.33% - 14px);
+  min-width: 200px;
+}
+
+.post-card:hover {
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.post-card-image, .post-card-image-placeholder {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  background-color: #f5f5f5;
+}
+
+.post-card-content {
+  padding: 12px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.post-card h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.1rem;
+}
+
+.post-card .post-meta {
+  font-size: 0.75rem;
+  color: #888;
+  margin-bottom: 8px;
+}
+
+.post-card .post-excerpt {
+  font-size: 0.85rem;
+  margin: 0;
+  color: #555;
+}
+
+@media (max-width: 768px) {
+  .post-card-container {
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+  }
+  .post-card {
+    flex: 0 0 calc(50% - 10px);
+    width: calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .post-card {
+    flex: 0 0 100%;
+    width: 100%;
+  }
 }

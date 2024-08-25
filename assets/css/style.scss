@@ -1,0 +1,29 @@
+---
+---
+
+// Add these custom styles
+.post-card h3 {
+  margin-top: 0;
+}
+
+.post-meta {
+  font-size: 0.8em;
+  color: #666;
+}
+
+.post-excerpt {
+  font-size: 0.9em;
+}
+
+// Responsive design
+@media (max-width: 768px) {
+  .post-card {
+    flex: 0 1 calc(50% - 10px);
+  }
+}
+
+@media (max-width: 480px) {
+  .post-card {
+    flex: 0 1 100%;
+  }
+}
