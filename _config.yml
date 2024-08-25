@@ -1,0 +1,17 @@
+title: Nishant Modak
+description: Personal blog and project showcase
+url: "https://nishantmodak.github.io"
+theme: minima
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+header_pages:
+  - about.md
+  - projects.md
+  - blog.md
+
+# Social links
+github_username: nishantmodak
+linkedin_username: nishantmodak
+# Add other social media usernames as needed
