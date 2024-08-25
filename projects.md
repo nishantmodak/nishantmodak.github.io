@@ -1,35 +1,18 @@
 ---
-layout: page
+layout: default
 title: Projects
 permalink: /projects/
 ---
 
-# My Projects
+# Projects
 
-Here's a selection of projects I've worked on. Each one represents a unique challenge and learning experience.
+- **[Project Name 1](link-to-project-1)** - Brief description of the project, its purpose, and your role.
 
-## [Project Name 1]
+- **[Project Name 2](link-to-project-2)** - Concise overview of the project, technologies used, and its impact.
 
-- **Description**: Brief overview of what this project does and its significance.
-- **Technologies Used**: List of key technologies, languages, or frameworks.
-- **My Role**: What you did in this project.
-- [View Project](#) | [GitHub Repository](#)
+- **[Project Name 3](link-to-project-3)** - Short explanation of the problem this project solves and your contribution.
 
-## [Project Name 2]
-
-- **Description**: Explain the purpose and impact of this project.
-- **Technologies Used**: Key tools and technologies involved.
-- **My Role**: Your contributions and responsibilities.
-- [View Project](#) | [GitHub Repository](#)
-
-## [Project Name 3]
-
-- **Description**: What problem does this project solve?
-- **Technologies Used**: Main technical components.
-- **My Role**: How you contributed to the project's success.
-- [View Project](#) | [GitHub Repository](#)
-
-[Add more projects as needed]
+[View more on GitHub](https://github.com/nishantmodak)
 
 ---
 

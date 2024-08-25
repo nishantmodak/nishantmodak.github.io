@@ -1,7 +1,7 @@
 title: Nishant Modak
 description: Personal blog and project showcase
 url: "https://nishantmodak.github.io"
-theme: minima
+theme: null
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
