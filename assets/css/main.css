@@ -20,6 +20,10 @@ body {
     padding: 40px 20px;
 }
 
+:root {
+    --h1-font-size: 2rem; /* Define h1 font size here for easy reference */
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
     margin-bottom: 20px;
@@ -28,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 h1 {
-    font-size: 2rem;
+    font-size: var(--h1-font-size);
 }
 
 h2 {
@@ -43,7 +47,7 @@ p {
 a {
     color: #333;
     text-decoration: none;
-    border-bottom: 1px solid #333;
+    transition: opacity 0.3s ease;
 }
 
 a:hover {
@@ -56,6 +60,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-bottom: 10px;
 }
 
 nav ul {
@@ -71,6 +76,15 @@ nav ul li a, .site-title {
     border-bottom: none;
 }
 
+/* .site-title {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    color: #333;
+} */
+
 /* Main content */
 main {
     margin-bottom: 40px;
@@ -79,20 +93,53 @@ main {
 /* Footer */
 footer {
     margin-top: 60px;
-    padding-top: 20px;
+    padding: 20px 0;
     border-top: 1px solid #eee;
     font-size: 0.875rem;
     color: #777;
 }
 
-/* Project list */
-ul {
-    list-style-type: none;
-    padding-left: 0;
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-ul li {
-    margin-bottom: 10px;
+.footer-content p {
+    margin: 0;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+}
+
+.social-icons a {
+    color: #777;
+    font-size: 1rem;
+    margin-left: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #333;
+}
+
+/* Responsive adjustment for smaller screens */
+@media (max-width: 600px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-icons {
+        margin-top: 10px;
+    }
+
+    .social-icons a:first-child {
+        margin-left: 0;
+    }
 }
 
 /* Responsive design */

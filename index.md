@@ -5,7 +5,7 @@ title: Home
 
 # Nishant Modak
 
-Software engineer and entrepreneur based in [Your Location].
+Software engineer and entrepreneur based in California.
 
 ## Recent Posts
 
