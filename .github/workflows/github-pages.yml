@@ -4,4 +4,4 @@ jobs:
       - name: Build site
         env:
           POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
-        run: jekyll build
+        run: jekyll build 
