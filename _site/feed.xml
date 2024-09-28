@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-27T18:40:11-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nishant Modak</title><subtitle>Personal blog and project showcase</subtitle><entry><title type="html">Log Models #1</title><link href="http://localhost:4000/engineering/2024/09/27/log-models.html" rel="alternate" type="text/html" title="Log Models #1" /><published>2024-09-27T00:00:00-07:00</published><updated>2024-09-27T00:00:00-07:00</updated><id>http://localhost:4000/engineering/2024/09/27/log-models</id><content type="html" xml:base="http://localhost:4000/engineering/2024/09/27/log-models.html"><![CDATA[<p>If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-27T18:42:42-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nishant Modak</title><subtitle>Personal blog and project showcase</subtitle><entry><title type="html">Log Models #1</title><link href="http://localhost:4000/engineering/2024/09/27/log-models.html" rel="alternate" type="text/html" title="Log Models #1" /><published>2024-09-27T00:00:00-07:00</published><updated>2024-09-27T00:00:00-07:00</updated><id>http://localhost:4000/engineering/2024/09/27/log-models</id><content type="html" xml:base="http://localhost:4000/engineering/2024/09/27/log-models.html"><![CDATA[<p>If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?</p>
 
 <p>This is a <em>log</em> of my exploration, learning, and experimentation with log analysis models especially in open telemetry.</p>
 
@@ -111,26 +111,4 @@
   <li>Interpretability: If you need to understand why an anomaly was flagged, some models (like Logsy) may be more interpretable than others.</li>
 </ol>
 
-<p>Are there any other models I should consider as I continue to share my findings?</p>]]></content><author><name></name></author><category term="engineering" /><category term="observability" /><category term="logs" /><category term="models" /><summary type="html"><![CDATA[If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Engineering Manager’s Dilemma: To Code or Not to Code?</title><link href="http://localhost:4000/technology/programming/2024/09/12/test-thisone-copy-2.html" rel="alternate" type="text/html" title="Engineering Manager’s Dilemma: To Code or Not to Code?" /><published>2024-09-12T00:00:00-07:00</published><updated>2024-09-12T00:00:00-07:00</updated><id>http://localhost:4000/technology/programming/2024/09/12/test-thisone%20copy%202</id><content type="html" xml:base="http://localhost:4000/technology/programming/2024/09/12/test-thisone-copy-2.html"><![CDATA[<h1 id="welcome-to-my-sample-blog-post">Welcome to My Sample Blog Post</h1>
-
-<p>This is a sample blog post to demonstrate the structure and formatting of a typical Markdown post.</p>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>In this post, we’ll cover some basic Markdown syntax and how it can be used to create engaging blog content.</p>
-
-<h2 id="main-content">Main Content</h2>
-
-<h3 id="markdown-basics">Markdown Basics</h3>
-
-<ol>
-  <li><strong>Bold Text</strong>: You can make text bold using double asterisks like <strong>this</strong>.</li>
-  <li><em>Italic Text</em>: Single asterisks create <em>italic text</em>.</li>
-  <li><del>Strikethrough</del>: Use double tildes for <del>strikethrough text</del>.</li>
-</ol>
-
-<h3 id="code-snippets">Code Snippets</h3>
-
-<p>Here’s an example of inline code: <code class="language-plaintext highlighter-rouge">console.log("Hello, World!");</code></p>
-
-<p>And a code block:</p>]]></content><author><name></name></author><category term="technology" /><category term="programming" /><category term="2024" /><category term="softwware engineering" /><category term="career ladders" /><category term="management" /><summary type="html"><![CDATA[Welcome to My Sample Blog Post]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>Are there any other models I should consider as I continue to share my findings?</p>]]></content><author><name></name></author><category term="engineering" /><category term="observability" /><category term="logs" /><category term="models" /><summary type="html"><![CDATA[If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
