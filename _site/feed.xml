@@ -1,4 +1,117 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-08-25T16:13:20-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nishant Modak</title><subtitle>Personal blog and project showcase</subtitle><entry><title type="html">Sample Blog Post</title><link href="http://localhost:4000/technology/programming/2023/05/24/test-thisone-copy-2.html" rel="alternate" type="text/html" title="Sample Blog Post" /><published>2023-05-24T00:00:00-07:00</published><updated>2023-05-24T00:00:00-07:00</updated><id>http://localhost:4000/technology/programming/2023/05/24/test-thisone%20copy%202</id><content type="html" xml:base="http://localhost:4000/technology/programming/2023/05/24/test-thisone-copy-2.html"><![CDATA[<h1 id="welcome-to-my-sample-blog-post">Welcome to My Sample Blog Post</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2024-09-27T18:40:11-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Nishant Modak</title><subtitle>Personal blog and project showcase</subtitle><entry><title type="html">Log Models #1</title><link href="http://localhost:4000/engineering/2024/09/27/log-models.html" rel="alternate" type="text/html" title="Log Models #1" /><published>2024-09-27T00:00:00-07:00</published><updated>2024-09-27T00:00:00-07:00</updated><id>http://localhost:4000/engineering/2024/09/27/log-models</id><content type="html" xml:base="http://localhost:4000/engineering/2024/09/27/log-models.html"><![CDATA[<p>If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?</p>
+
+<p>This is a <em>log</em> of my exploration, learning, and experimentation with log analysis models especially in open telemetry.</p>
+
+<h2 id="the-problem">The Problem</h2>
+
+<p>Logs are everywhere. They’re the silent recorders of our systems’ lives, capturing every event, error, and transaction. But logs are only useful if we can extract meaning from them. While traditional log analysis models are useful, they’re not without their limitations.</p>
+
+<h3 id="limitations">Limitations</h3>
+
+<ol>
+  <li><strong>Scale</strong>: Traditional log analysis models can’t handle the scale of modern systems.</li>
+  <li><strong>Complexity</strong>: Logs are messy and complex. They can include structured and unstructured data.</li>
+  <li><strong>Variability</strong>: Logs can come from a variety of sources and systems.</li>
+  <li><strong>Speed</strong>: Logs need to be processed in real-time.</li>
+</ol>
+
+<p>Most importantly, extracting meaning from logs is a <em>hard</em> problem.</p>
+
+<h2 id="model-comparison-at-a-glance">Model Comparison at a Glance</h2>
+
+<p>Before we dive into the details of each model, let’s take a quick look at how they compare:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>Model</th>
+      <th>Architecture</th>
+      <th>Supervision</th>
+      <th>Strengths</th>
+      <th>Limitations</th>
+      <th>Ideal Use Case</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>LogBERT</td>
+      <td>BERT (Transformer)</td>
+      <td>Supervised</td>
+      <td>- Understands context<br />- Handles unstructured data</td>
+      <td>- Needs labeled data<br />- Computationally intensive</td>
+      <td>Complex log analysis with contextual dependencies</td>
+    </tr>
+    <tr>
+      <td>DeepLog</td>
+      <td>LSTM</td>
+      <td>Unsupervised</td>
+      <td>- Works with sequences<br />- Detects unseen anomalies</td>
+      <td>- Struggles with long-term dependencies<br />- Needs parameter tuning</td>
+      <td>Continuous monitoring for anomalies</td>
+    </tr>
+    <tr>
+      <td>LogAnomaly</td>
+      <td>Word Embeddings + CNN</td>
+      <td>Semi-supervised</td>
+      <td>- Captures local patterns<br />- Works with partial labels</td>
+      <td>- May miss global context<br />- Requires pre-processing</td>
+      <td>Anomaly detection in semi-structured app logs</td>
+    </tr>
+    <tr>
+      <td>Logsy</td>
+      <td>Clustering + PCA</td>
+      <td>Unsupervised</td>
+      <td>- Works with unlabeled data<br />- Handles high dimensions</td>
+      <td>- Struggles with complex patterns<br />- Parameter sensitive</td>
+      <td>Initial exploration of unlabeled log data</td>
+    </tr>
+    <tr>
+      <td>LogRobust</td>
+      <td>Attention Bi-LSTM</td>
+      <td>Supervised</td>
+      <td>- Robust to parsing errors<br />- Captures bidirectional context</td>
+      <td>- Needs labeled data<br />- Complex architecture</td>
+      <td>Analyzing logs from systems with varying formats</td>
+    </tr>
+    <tr>
+      <td>LogAI</td>
+      <td>Multiple (toolkit)</td>
+      <td>Both</td>
+      <td>- Flexible<br />- End-to-end solution</td>
+      <td>- Complex setup<br />- May be overkill for simple tasks</td>
+      <td>Comprehensive log analysis across various systems</td>
+    </tr>
+    <tr>
+      <td>LSTM-based</td>
+      <td>LSTM</td>
+      <td>Usually Supervised</td>
+      <td>- Good with sequences<br />- Relatively simple</td>
+      <td>- Struggles with very long logs<br />- Often needs labeled data</td>
+      <td>Wide range of log analysis tasks</td>
+    </tr>
+    <tr>
+      <td>Transformer-based</td>
+      <td>Transformer (e.g., GPT)</td>
+      <td>Usually Supervised</td>
+      <td>- Excellent with complex contexts<br />- Captures long-range dependencies</td>
+      <td>- Computationally intensive<br />- Needs lots of data</td>
+      <td>Complex analysis in large-scale systems</td>
+    </tr>
+  </tbody>
+</table>
+
+<h2 id="practical-considerations">Practical Considerations</h2>
+<p>When choosing a log analysis model, consider:</p>
+
+<ol>
+  <li>Data volume: How much log data are you dealing with? Some models (like Transformer-based ones) may struggle with very large volumes.</li>
+  <li>Labeling effort: Do you have labeled examples of anomalies? If not, unsupervised methods like DeepLog or Logsy might be more appropriate.</li>
+  <li>Computational resources: Models like LogBERT and Transformer-based approaches require significant computational power.</li>
+  <li>Real-time vs. batch processing: Some models are better suited for real-time analysis, while others work well in batch mode.</li>
+  <li>Interpretability: If you need to understand why an anomaly was flagged, some models (like Logsy) may be more interpretable than others.</li>
+</ol>
+
+<p>Are there any other models I should consider as I continue to share my findings?</p>]]></content><author><name></name></author><category term="engineering" /><category term="observability" /><category term="logs" /><category term="models" /><summary type="html"><![CDATA[If LLM Models are all the rage, can we use them for understanding our telemetry data and in particular, logs?]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Engineering Manager’s Dilemma: To Code or Not to Code?</title><link href="http://localhost:4000/technology/programming/2024/09/12/test-thisone-copy-2.html" rel="alternate" type="text/html" title="Engineering Manager’s Dilemma: To Code or Not to Code?" /><published>2024-09-12T00:00:00-07:00</published><updated>2024-09-12T00:00:00-07:00</updated><id>http://localhost:4000/technology/programming/2024/09/12/test-thisone%20copy%202</id><content type="html" xml:base="http://localhost:4000/technology/programming/2024/09/12/test-thisone-copy-2.html"><![CDATA[<h1 id="welcome-to-my-sample-blog-post">Welcome to My Sample Blog Post</h1>
 
 <p>This is a sample blog post to demonstrate the structure and formatting of a typical Markdown post.</p>
 
@@ -20,54 +133,4 @@
 
 <p>Here’s an example of inline code: <code class="language-plaintext highlighter-rouge">console.log("Hello, World!");</code></p>
 
-<p>And a code block:</p>]]></content><author><name></name></author><category term="technology" /><category term="programming" /><category term="sample" /><category term="markdown" /><category term="blog" /><summary type="html"><![CDATA[Welcome to My Sample Blog Post]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sample Blog Post</title><link href="http://localhost:4000/technology/programming/2023/05/24/test-thisone-copy.html" rel="alternate" type="text/html" title="Sample Blog Post" /><published>2023-05-24T00:00:00-07:00</published><updated>2023-05-24T00:00:00-07:00</updated><id>http://localhost:4000/technology/programming/2023/05/24/test-thisone%20copy</id><content type="html" xml:base="http://localhost:4000/technology/programming/2023/05/24/test-thisone-copy.html"><![CDATA[<h1 id="welcome-to-my-sample-blog-post">Welcome to My Sample Blog Post</h1>
-
-<p>This is a sample blog post to demonstrate the structure and formatting of a typical Markdown post.</p>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>In this post, we’ll cover some basic Markdown syntax and how it can be used to create engaging blog content.</p>
-
-<h2 id="main-content">Main Content</h2>
-
-<h3 id="markdown-basics">Markdown Basics</h3>
-
-<ol>
-  <li><strong>Bold Text</strong>: You can make text bold using double asterisks like <strong>this</strong>.</li>
-  <li><em>Italic Text</em>: Single asterisks create <em>italic text</em>.</li>
-  <li><del>Strikethrough</del>: Use double tildes for <del>strikethrough text</del>.</li>
-</ol>
-
-<h3 id="code-snippets">Code Snippets</h3>
-
-<p>Here’s an example of inline code: <code class="language-plaintext highlighter-rouge">console.log("Hello, World!");</code></p>
-
-<p>And a code block:</p>]]></content><author><name></name></author><category term="technology" /><category term="programming" /><category term="sample" /><category term="markdown" /><category term="blog" /><summary type="html"><![CDATA[Welcome to My Sample Blog Post]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Sample Blog Post</title><link href="http://localhost:4000/technology/programming/2023/05/24/test-thisone.html" rel="alternate" type="text/html" title="Sample Blog Post" /><published>2023-05-24T00:00:00-07:00</published><updated>2023-05-24T00:00:00-07:00</updated><id>http://localhost:4000/technology/programming/2023/05/24/test-thisone</id><content type="html" xml:base="http://localhost:4000/technology/programming/2023/05/24/test-thisone.html"><![CDATA[<h1 id="welcome-to-my-sample-blog-post">Welcome to My Sample Blog Post</h1>
-
-<p>This is a sample blog post to demonstrate the structure and formatting of a typical Markdown post.</p>
-
-<h2 id="introduction">Introduction</h2>
-
-<p>In this post, we’ll cover some basic Markdown syntax and how it can be used to create engaging blog content.</p>
-
-<p><img src="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" alt="Sample Image" /></p>
-
-<p>This is a sample image that will be displayed on the index page and in the blog post.</p>
-
-<h2 id="main-content">Main Content</h2>
-
-<h3 id="markdown-basics">Markdown Basics</h3>
-
-<ol>
-  <li><strong>Bold Text</strong>: You can make text bold using double asterisks like <strong>this</strong>.</li>
-  <li><em>Italic Text</em>: Single asterisks create <em>italic text</em>.</li>
-  <li><del>Strikethrough</del>: Use double tildes for <del>strikethrough text</del>.</li>
-</ol>
-
-<h3 id="code-snippets">Code Snippets</h3>
-
-<p>Here’s an example of inline code: <code class="language-plaintext highlighter-rouge">console.log("Hello, World!");</code></p>
-
-<p>And a code block:</p>
-
-<p>```</p>]]></content><author><name></name></author><category term="technology" /><category term="programming" /><category term="sample" /><category term="markdown" /><category term="blog" /><summary type="html"><![CDATA[Welcome to My Sample Blog Post]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<p>And a code block:</p>]]></content><author><name></name></author><category term="technology" /><category term="programming" /><category term="2024" /><category term="softwware engineering" /><category term="career ladders" /><category term="management" /><summary type="html"><![CDATA[Welcome to My Sample Blog Post]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" /><media:content medium="image" url="https://via.placeholder.com/800x400.png?text=Sample+Blog+Post+Image" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
