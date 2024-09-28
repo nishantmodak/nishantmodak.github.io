@@ -1,0 +1,7 @@
+jobs:
+  build-and-deploy:
+    steps:
+      - name: Build site
+        env:
+          POSTHOG_API_KEY: ${{ secrets.POSTHOG_API_KEY }}
+        run: jekyll build

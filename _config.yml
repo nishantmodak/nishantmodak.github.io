@@ -19,3 +19,5 @@ linkedin_username: nishantmodak
 sass:
   sass_dir: _sass
   style: compressed
+
+posthog_api_key: <%= ENV['POSTHOG_API_KEY'] %>
